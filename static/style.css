@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+h1 {
+    color: #333;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 5px;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+h1, h2 {
+    color: #343a40;
+}
+ul {
+    padding-left: 0;
+}
