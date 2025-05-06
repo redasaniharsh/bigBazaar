@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Welcome to Our Marketplace</h1>
+<form method="POST" action="{{ url_for('navigate') }}">
+    <div class="mb-3">
+        <label for="business_type" class="form-label">Choose a business type:</label>
+        <select name="business_type" class="form-select" required>
+            <option value="restaurant">Restaurant</option>
+            <option value="grocery">Grocery Store</option>
+            <option value="clothing">Clothing Store</option>
+            <option value="stationary">Stationary Shop</option>
+            <option value="fruits_vegetables">Fruits & Vegetables</option>
+        </select>
+        
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Go</button>
+</form>
+{% endblock %}
+
+

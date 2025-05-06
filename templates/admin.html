@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block title %}Admin{% endblock %}
+
+{% block content %}
+<h1>Admin Dashboard</h1>
+
+<!-- Restaurant Orders -->
+<h3>Restaurant Orders</h3>
+<ul class="list-group mb-2">
+    {% for order in restaurant_orders %}
+    <li class="list-group-item">{{ order.item_name }} - ${{ "%.2f"|format(order.price) }}</li>
+    {% endfor %}
+</ul>
+<strong>Total Sales: ${{ "%.2f"|format(total_sales["Restaurant"]) }}</strong>
+
+<!-- Grocery Orders -->
+<h3 class="mt-4">Grocery Orders</h3>
+<ul class="list-group mb-2">
+    {% for order in grocery_orders %}
+    <li class="list-group-item">{{ order.item_name }} - ${{ "%.2f"|format(order.price) }}</li>
+    {% endfor %}
+</ul>
+<strong>Total Sales: ${{ "%.2f"|format(total_sales["Grocery Store"]) }}</strong>
+
+<!-- Clothing Orders -->
+<h3 class="mt-4">Clothing Store Orders</h3>
+<ul class="list-group mb-2">
+    {% for order in clothing_orders %}
+    <li class="list-group-item">{{ order.item_name }} - ${{ "%.2f"|format(order.price) }}</li>
+    {% endfor %}
+</ul>
+<strong>Total Sales: ${{ "%.2f"|format(total_sales["Clothing Store"]) }}</strong>
+
+<!-- Stationary Orders -->
+<h3 class="mt-4">Stationary Shop Orders</h3>
+<ul class="list-group mb-2">
+    {% for order in stationary_orders %}
+    <li class="list-group-item">{{ order.item_name }} - ${{ "%.2f"|format(order.price) }}</li>
+    {% endfor %}
+</ul>
+<strong>Total Sales: ${{ "%.2f"|format(total_sales["Stationary Shop"]) }}</strong>
+
+<!-- Fruits & Vegetables Orders -->
+<h3 class="mt-4">Fruits & Vegetables Orders</h3>
+<ul class="list-group mb-2">
+    {% for order in fruits_orders %}
+    <li class="list-group-item">{{ order.item_name }} - ${{ "%.2f"|format(order.price) }}</li>
+    {% endfor %}
+</ul>
+<strong>Total Sales: ${{ "%.2f"|format(total_sales["Fruits & Vegetables"]) }}</strong>
+
+{% endblock %}
